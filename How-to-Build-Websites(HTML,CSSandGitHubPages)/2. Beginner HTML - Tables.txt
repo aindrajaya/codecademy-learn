@@ -247,3 +247,8 @@ ANS = <th scopr="row"></th>
 </tr>]
 ANS = It creates a cell that will span two columns and a cell that will span a single column
 
+8. Which of the following tags is used to separate the body of the table its headers and footers?
+ANS = <tbody></tbody>
+
+9. Which tag should surround an entire table of data?
+ANS = <table></table>
