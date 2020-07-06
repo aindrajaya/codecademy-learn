@@ -1,0 +1,106 @@
+INTRODUCTION TO HTML
+-----------------------
+#Review
+Congratulations on completing the first lesson of HTML! You are well on your way to becoming a skilled web developer. Let's review what you've learned so far:
+--> HTML stands for Hyper Text Markup Language and is used to create the structure and content of a webpage.
+--> Most HTML elements contain opening and closing tags with raw text or other HTML tags between them.
+--> HTML elements can be nested inside other elements. The enclosed element is the child of the enclosing parent element.
+--> Any visible content shold be placed within the opening and closing <body> tags.
+--> Headings and sub-headings, <h1> to <h6> tags, are used to enlarge text.
+--> <p>, <span> and <div> tags specify text or blocks.
+--> The <em> and <strong> tags are used ot emphasize text.
+--> Line breaks are created with the <br> tag
+--> Ordered list (<ol>)  are numbered and unordered lists (<ul>) are bulleted.
+--> Images (<img>) and videos (<video>) can be added by linking to an existing sourse.
+In the next lesson, we'll take the content that you've added ot this website transform it into an HTML document that's ready to go on the web.
+
+Introduction QUIZ
+1. Which of the following tags would contain the HTML for a web page's visible content? 
+ANS = <body>
+2. Why is the code below incorect?
+<video src=""myVid.mp4 controls>
+ANS = The video element is not self-closing tag. It should have an opening and a closing tag.
+3. What is the correct definition of an HTML element?
+ANS = And HTML tag and the content that it contains or marks up
+4. Which of the following is the correct syntax for the paragraph HTLM element?
+ANS = <p>I am a paragraph</p>
+5. Match the blanks with the proper syntax to create an HTML paragraph element from this text
+ANS = <p> I'm ready to rock and roll </p>
+6. What HTML code will most web browsers display italics?
+ANS = <em>Hello</em>
+7. Which of the following is valid HTML for the heading tag with the smallest size and lowest rank in the hierarchy?
+ASN = <h6>
+8. the abbreviation HTML stands for which of the following?
+ANS = HyperText Markup Language
+9. Which of the following elements will directly affect the vertical spacing in an HTML layout?
+ANS = <br>
+10. The following code is supposed to display an image, but fails to do so. Why?
+ANS = the src attribute is mising and must be set equal to the image URL, enclosed in double quotations marks.
+11. The following code results in no visible output to the broser WHy?
+[<ol>
+</ol>]
+ANS = List items must be added to the list
+12. Which element is the parent of <p>My Paragraph</p>?
+[<body>
+  <p>Paragraph 1</p>
+  <div>
+    <a href="http://www.codecademy.com">Codecademy</a>
+    <p>My Paragraph</p>
+  </div>
+</body>]
+ANS = <div>
+13. How would the output of the code below change if <ul> and </ul> were changed to <ol> and </ol>, respectively?
+[<ul>
+  <li>Lorem</li>
+  <li>Ipsum</li>
+  <li>Horribilis</li>
+</ul>]
+ANS = Bullet points in the output would change to numbers
+
+
+
+HTML TAGS
+You now know all of the basics elements and set-up you need to structure an HTML page and add different types of content. With the help of CSS< very sson you'll be creating beautiful websites! While some tags have a very specific purpose, such as imagea and video tags, most tags are used to describe the content that they surroun, which helps us modify and style our content later. There are seemingly infinite numbers of tags to use (many more than we've taught). Knowing when to use each one is based on how you want to describe the content of your HTML. Descriptive, well-chosen tags are one key to high-quality web development. A full list of available HTLM ags can be fond in Mozilla documentations.
+Let's review what you've learned this lesson:
+--> The <!DOCTYPE html> declaration should always be the first line of code in your HTML files. This lets the browser know what version of HTML to expect.
+--> The <html> element will contain all of your HTML code.
+--> Information about the web page, like the title, belongs within the <head> of the page.
+--> You can add a title to your web page by using the <title> element, inside of the head. 
+--> A webpage's title appears in a browser's tab.
+--> Anchor tags (<a>) are used to link to internal pages, external pages or content on the same page.
+--> You can create sections on a webpage and jump to them using <a> tags and adding id s to the elements you wish to jump to.
+--> Whitespace betwene HTML elements helps make code easier to read while not changing how elements appear in the browser.
+--> Indentation also helps makle code easier to read. It makes parent-childe relationship visible.
+--> Comments are writen in HTML usnig the following syntax <!-- you -->
+QUIZ
+1. What is the purpose of identation and whitespace?
+ANS = To make code in an HTML file more readable
+2. All HTML code must be nested within which of the following?
+ANS = <html>
+3. WHich of the following is the correct syntax for a comment in HTML?
+ANS <!-- -->
+4. WHich of the following tags instructs the browser to expect a well-formed HTML document?
+ANS = <!DOCTYPE>
+5. WHich of the following would create a link to a local HTML file called aboutme.html?
+ASN = <a href="./aboutme.html">About Me</a>
+6. The following HTML code should only exist within which of the following tags? <title>Codecademy</title>
+ANS = <head>
+7. Why should the document type declaretino be included in all HTML documents?
+ANS = To specify the HTML standard being used in the content
+8. Which of the following elements contains a web page's metadata?
+ANS = <head>
+9. The following code is supposed to create a link to another web page, but fails to do so. Why? <a>Codecademy</a>
+ANS = The <a> element is missing the href attribute set to the URL of the Codecademy website
+10. The contents of the <title> tag will appear where in a modern browser?
+ANS = The browser's tab
+11. The following code creates a link to another page. WHich of the following will cause the page to open in a new browser?
+<a href="https://codecademy.com/">codecademy</a>
+ANS = add the target attribute, with its value set to _blank
+12. Which following is the current HTML standard?
+ANS = HTML5
+
+
+
+
+
+

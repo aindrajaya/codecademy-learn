@@ -1,0 +1,79 @@
+#BEGINNER HTML
+0. Introduction to HTML
+Welsome to the world of code! Last year, millions of learners from our community started with HTML. Why? HTML is the skeleton of all web pages. It’s often the first language learned by developers, marketers, and designers and is core to front-end development work. If this is your first time touching code, we’re excited for what you’re about to create.
+So what exactly is HTML? HTML provides structure to the content appearing on a website, such as images, text, or videos. Right-click on anyh page on the internet, choose "inspect," and you'll see HTML in a panel of your screen. HTML stands for Hypertext Markup Language.
+- A markup language is a computer language that defines the structure and presentation of raw text. 
+- In HTML, the computer can interpret raw text that is wrapped in HTML elements.
+- HyperText is text displayed on a computer or device that provides or device that provides access to other text through links, also known as hyperlinks. You probably clicked on a couple of hyperlinks on your way to this Codeacademy course.
+Learning HTML is the first step in creating websites, but even a bit of knowledge can help you injects code snippets into newsletter, blog or website templates. As you continue learning, you can layer HTML with CSS and JavaScript to create visually compelling and dynamic websites. But for now, we're going to focus on how to add and modify basic content on a page, like text, images,  and videos. Don't worry if the website look ugly- we're just getting started. 
+{}
+
+1. HTML Anatomy
+HTML is composed of elements. These elments structure the webpage and define its content. Let's take a look at hot they are written. The diagram to the right displays an HTML paragraph element. As we can see, the paragraph element is made up of:
+-An openign tag<p>
+-The content ("Hello World!" text)
+-A closing tag (</p>)
+A tag and the content between it is called an HTML element. There are many tags that we can use to organize and display text and other types of content, like images. Let’s quickly review each part of the element pictured:	
+-HTML element (or simply, element)__ a unit of content in an HTML document formed by HTML tags and the text or media it contains.
+-HTML Tag__ the element name, surrounded by an opening (<) and closing (>) angle bracket.
+-Opening Tag__ the first HTML tag used to start an HTML element. The tag type is surrounded by opening and closing angle brackets.
+-Content__ The information (text or other elements) contained between the opening and closing tags of an HTML element.
+-Closing Tag__ the second HTML tag used to end an HTML element. Closing tags have a forward slash (/) inside of them, directly after the left angle bracket.
+{Community Forum Q&A}
+>>{What type of content might an HTML element contain?
+The element in this exercise 592 contains text but can elements contain other types of content? If so, what types of content might an HTML element contain?
+Answer
+It depends on the element. As you will learn, <p>, <div>, and <span> elements can contain text whereas elements like <ul> or <ol> should only contain <li> elements as direct children.
+Block level tags like the <div> can contain all tags that can exist within the <body> (in other words, we can nest other elements within a <div>) whereas self-closing tags like <img> can not contain any content at all!}
+>>{Do tags themselves count as content?
+Question
+In this example 235, do the <p> tags also count as content or is the content just the sentence contained within the tags?
+Answer
+The content is just the information contained within the tags themselves. The tags are marking up this content so that the browser knows how to properly interpret and structure this information. As you will learn later in this lesson, the content is not always contained within an opening and closing tag. For example, the <img> tag is an example of a self-closing tag and it introduces content into the page differently than the <p> element.}
+>>{Is there a sentence or a word element?
+Question
+In the example given in this exercise 162, we use the <p> tag even for a two word sentence. Do finer granularity elements exist? For example, is there a sentence or a word element?
+Answer
+While a sentence or a word element does not exist, a developer who wanted finer control over a piece of a paragraph like a word, sentence or character might use an element like <span>, <em>, or <strong> to more specifically target content. You will learn about each of these tags and their use cases in the exercises to come. For now, just know that they exist and can be used to target sentences, words, or characters within a paragraph or even to target entire paragraphs within larger articles. In other words, developers can use these tags to control the granularity of the targeted content.}
+
+2. The Body
+One of the key HTML elements we use to build a webpage is the body element. Only content inside the opening and closing body tags can be displayed to the screeen. Here's what opening and closing body tags look like:
+[<body>
+</body]
+Once the file has a body, many different types of content- including text, images, and buttons can be added to the body.
+[<body>
+  <p>What's up, doc?</p>
+</body>]
+
+3. HTML Structure
+HTML is organized as a collection of family tree relationships. As you saw in the last exercise, we placed <p> tags withing <body> tags. When an element is contained inside another element, it is considered the child of that element. The child element is said to be nested inside of the parent element.
+[<body>
+  <p>This paragraph is a child of the body</p>
+</body>]
+In the example above, the <p> element is nested inside the <body> element. The <p> element is considered a child of the <body> element, and the <body> element is considered the parent. You can also see that we’ve added two spaces of indentation (using the space bar) for better readability. Since there can be multiple levels of nesting, this analogy can be extended to grandchildren, great-grand children, and beyond. The relationship between elements and their ancestor and descendent elements is known as hierarchy. Let's consider a more complicated example that users some new tags.
+[<body>
+  <div>
+    <h1>Sibling to p, but also grandchild of body</h1>
+    <p>Sibling to h1, but also grandchild of body</p>
+  </div>
+</body>]
+In this example, the <body> element is the parent of the <div> element. Both the <h1> and <p> elements are children of the <div> element. Because the <h1> and <p> elements are at the same level, they are considered siblings and are both grandchildren of the <body> element.
+Understanding HTML hierarchy is imporatan because child elements can inherit behaviour and styling from their parent element. You'll learn more about webpage hierarchy when you starting digging into CSS.
+
+4. HEADINGS
+Headings in HTML are similar to headings in other types of media. For example, in newspapers, large headings are typically used to capture a reader attention. Other times, headings are used to describe content, like the tittle of a movie or and educational article. HTML follows a similar pattern. In HTML, there are six different headings or heading elements. Headings can be used for variety of purposes, like titling sections, articles, or other forms of content. The following is the list of heading elements available in HTML. They are ordered from largest to smallest in size. <h1> — used for main headings. All other smaller headings are used for subheadings.
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+The following example code uses a headline intended to capture a reader’s attention. It uses the largest heading available, the main heading element:
+[<h1>BREAKING NEWS</h1>]
+
+5. DIVS
+One of the most popular elements in
+
+
+
+#1. Elements and Structure
+#2. Tables
