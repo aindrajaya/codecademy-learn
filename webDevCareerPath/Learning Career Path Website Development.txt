@@ -1,0 +1,103 @@
+WEB DEVELOPMENT PATH FROM CODE ACADEMY
+----------------------
+#Learn HTML
+1. Introduction to Web Development
+2. Elements and Structure
+3. Tables
+4. Forms
+5. Semanctic HTML
+
+#Styling a Website
+1. Selectors and Visual Rules
+2. Intro to Local Website Development
+
+#Getting Started with JavaScript
+1. Introduction
+2. Conditionals
+3. Functions
+4. Code Challenges: JavaScript Fundamentals
+
+#Getting More Advanced with Design
+1. The Box Model
+2. Display and Positioning
+3. Colors
+4. Typography
+5. CSS Code Challenges
+6. Learn Responsive Design
+7. Layout with Flexbox
+
+#JavaScript: Arrays, Loops, and Objects
+1. Scope
+2. Arrays
+3. Loops
+4. Iterations
+5. Objects
+6. Intermediate JavaScript Practice
+7. Re-creating the Lodash Library
+
+#. Building Interactive JavaScript Website
+1. JavaScript Interactive Website
+2. DOM Events with JavaScript
+3. Templating with Handlebars
+
+#Intermediate JavaScript
+1. Classes
+2. Modules
+3. Errors and Error Handling
+4. Promises
+5. Async-Await
+6. Requests
+
+#Learn the Command Line
+1. Navigating the File System
+2. Viewing and Changing the File System
+3. Redirecting Input and Output
+4. Configuring the Environment
+5. Bash Scripting
+
+#Learn Git
+1. Basic Git Workflow
+2. How to Backtrack in Git
+3. Git Branching
+4. Git Teamwork
+
+#Building Front-end Applications with React
+1. Browser Compatibility and Transpilation
+2. JSX
+3. React Components
+4. React Development Setip and Ravenous: pt1
+5. Components Interacting
+6. Ravenous: pt2
+7. Stateless Components From Stateful Components
+8. Ravenous: pt3
+9. Ravenous: pt4
+10. Advanced React
+11. Lifecycle Methods
+12. Jamming
+
+#JavaScript Back-End Development
+1. Introduction to Node.js
+2. Learn Express: Create a Server
+3. Learn Express: Middleware
+4. Express Cumulative Project
+
+#SQL and Databases for Web Development
+1. SQL Introduction
+2. SQL: Creating, Updating, and Deleting Data
+3. Performing SQL Calculations
+4. Working with Multiple SQL Tables
+5. Setting up SQLite
+6. Project: Gold Medal Metrics
+
+#Building a Persistent API
+1. Learn Node-SQLite
+2. Persistent API Cumulative Projects
+
+#Test-Driven Development with JavaScript
+1. Why Test?
+2. Write Good Test with Mocha
+3. Learn Test-Drivent Development with Mocha
+4. Outside-in TDD
+5. Learn Feature Testing with TDD
+6. Learn Server Testing with TDD
+7. Learn Model Testing with TDD
