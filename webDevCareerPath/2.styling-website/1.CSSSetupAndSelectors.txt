@@ -28,4 +28,99 @@ The CSS code in the example above changes the color of all paragraph text to red
 THE .CSS FILE
 Developers avoid mixing code by storing HTML and CSS code in separate files (HTML files contain only HTML code, and CSS files contain only CSS code) You can create a CSS file by using the .css file name extension, like so: style.css. With a CSS file, you can write all the CSS code needed to style a page without sacrificing the readability and maintainability of your HTML file.
 
+LINKING THE CSS FILE
+Perfect! We successfully separated structure (HTML) from styling (CSS), but the web page still looks bland. Why? When HTML and CSS code are in separate files, the files must be linked. Otherwise, the HTML file wont' be able to locate the CSS code, and the styling will not be applied. You can use the <link> element to link HTML and CSS files together. The <link> element must be placed within the head of the HTML file. It is a self-closing tag and requires the following three attributes:
+1. href - like the anchor element, the value of this attribute must be the address, or path, to the CSS file.
+2. type - this attribute descries the type of document that you are linking to (in this case, a CSS file). The value of this attribute should be set to text/css.
+3. rel - this attribute describes the relationship between the HTML file and the CSS file. Because you are linking to a stylesheet, the value should be set to stylesheet.
+When linking an HTML file and a CSS file together, the <link> element will look like the following:
+[<link href="https://www.codecademy.com/stylesheets/style.css" type="text/css" rel="stylesheet">]
+Note that in the example above the path to the stylesheet is a URL:
+[https://www.codecademy.com/stylesheets/style.css]
+Specifying the path to the stylesheet using a URL is one way of linking a stylesheet. If the CSS file is stored in the same directory as your HTML file, then you can specify a relative path instead of a URL, like so: 
+[<link href="./style.css" type="text/css" rel="stylesheet">]
+Using a relative path is very common way of linking a stylesheet.
  
+TAG NAME
+CSS can select HTML elements by using an element’s tag name. A tag name is the word (or character) between HTML angle brackets. For example, in HTML, the tag for a paragraph element is <p>. The CSS syntax for selecting <p> elements is:
+[p {
+}]
+In the example above, all paragraph elements will be selected using a CSS selector. The selector in the example above is p. Note that the CSS selector matches the HTML tag for that element, but without the angle brackets. In addition, two curly braces follow immediately after the selector (an opening and closing brace, respectively). Any CSS properties will go inside of the curly braces to style the selected elements.
+
+CLASS NAME
+CSS is not limited to selecting elements by tag name. HTML elements can have more than just a tag name; they can also have attributes. One common attribute is the class attribute. It’s also possible to select an element by its class attribute. For example, consider the following HTML:
+[ <p class="brand">Sole Shoe Company</p> ]
+The paragraph element in the example above has a class attribute within the <p> tag. The class attribute is set to "brand". To select this element using CSS, we could use the following CSS selector:
+[.brand {
+
+}]
+To select an HTML element by its class using CSS, a period (.) must be prepended to the class’s name. In the example above case, the class is brand, so the CSS selector for it is .brand.
+
+MULTIPLE CLASSES
+We can use CSS to select an HTML element’s class attribute by name. So far, we’ve selected elements using only one class name per element. If every HTML element had a single class, all the style information for each element would require a new class. Luckily, it’s possible to add more than one class name to an HTML element’s class attribute. For instance, perhaps there’s a heading element that needs to be green and bold. You could write two CSS rules like so:
+[.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}]
+Then, you could include both of these classes on one HTML element like this:
+[ <h1 class="green bold"> ... </h1> ]
+We can add multiple classes to an HTML element’s class attribute by separating them with a space. This enables us to mix and match CSS classes to create many unique styles without writing a custom class for every style combination needed.
+
+ID NAME
+If an HTML element needs to be styled uniquely (no matter what classes are applied to the element), we can add an ID to the element. To add an ID to an element, the element needs an id attribute:
+[ <h1 id="large-title"> ... </h1> ]
+Then, CSS can select HTML elements by their id attribute. To select an id element, CSS prepends the id name with a hashtag (#). For instance, if we wanted to select the HTML element in the example above, it would look like this:
+[#large-title {
+
+}]
+The id name is large-title, therefore the CSS selector for it is #large-title.
+
+CLASSES AND IDs
+CSS can select HTML elememnts by their tag, class, and ID. CSS classes and IDs have differet purposes, which can affect which one you use to style HTML elements. CSS classses are mean to be reused over many elements. By writing CSS classes, you can style elements in a variety of ways by mixing classes on HTML elements. For instance, imagine a page with two headlines. One headline needs to be  bold and blue, and the other needs to be bold and green. Instead of writing separate CSS rules for each headline that repeat each other's code, it's better to write a .bold CSS rule, a .green CSS rule, and a .blue CSS rule. Then you can give one headlline the bold green classes, and the other the bold blue classes. While classes are meant to be used many times, an ID is meant to style only one element. As we’ll learn in the next exercise, IDs override the styles of tags and classes. Since IDs override class and tag styles, they should be used sparingly and only on elements that need to always appear the same.
+
+SPECIFICITY
+Specifity is the order by which the browser decides which CSS styles will be displayed. A best practice in CSS is to style elements while using the lowes degree of specificity, so that if an element needs a new style, it is easy to override. IDs are the most specific selector in CSS, followed by classes, and finally, tags. For example, consider the following HTML and CSS:
+[<h1 class="headline">Breaking News</h1>]
+[h1 {
+  color: red;
+}
+
+.headline {
+  color: firebrick;
+}]
+In the example code above, the color of the heading would be set to firebrick, as the class selector is more specific than the tag selector. If an ID attribute (and selector) were added to the code above, the styles within the ID selector’s body would override all other styles for the heading. The only way to override an ID is to add another ID with additional styling. Over time, as files grow with code, many elements may have IDs, which can make CSS difficult to edit, since a new, more specific style must be created to change the style of an element. To make styles easy to edit, it’s best to style with a tag selector, if possible. If not, add a class selector. If that is not specific enough, then consider using an ID selector.
+
+CHAINING SELECTORS
+When writing CSS rules, it’s possible to require an HTML element to have two or more CSS selectors at the same time. This is done by combining multiple selectors, which we will refer to as chaining. For instance, if there was a .special class for h1 elements, the CSS would look like:
+[h1.special {
+}]
+The code above would select only the h1 elements that have a class of special. IF a p element also had a class of special, the rulte in the example would not style the paragraph.
+
+NESTED ELEMENTS
+In additon to chaining selectors to select elements, CSS also supports selecting elemens that are nested within other HTML element. For instance, consider the following HTML:
+[<ul class='main-list'>
+  <li> ... </li>
+  <li> ... </li>
+  <li> ... </li>
+</ul>]
+The nested <li> elements are selected with the following CSS:
+[.main-list li {
+}]
+In the example above, .main-list selects the .main-list element (the unordered list element). The nested <li> are selected by adding li to the selector, separated by space resulting in .main-list li as the final selector (note the space in the selector). Selecting elements in this way can make our selectors even more specific by making sure they appear in the context we expect.
+
+CHAINING AND SPECIFICITY
+In the last exercies, instead of selecting all h5 element, you selected only the h5 elements nested inside the .description elements. This CSS selector ws more specific that writing only h5. Adding more than on tag, class,or ID to a CSS selector increases the sepcificity of the CSS selector.
+For instance, consider the following CSS:
+[p {
+  color: blue;
+}
+
+.main p {
+  color: red;
+}]
+Both of these CSS rules define what a p element should look like. Since .main p has a class and a p tag as its selector, only the p elements inside the .main element will appear red. This occurs despite there being another more general rule that states p elements should be blue.
+
+IMPORTANT
