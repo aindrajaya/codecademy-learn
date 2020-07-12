@@ -90,5 +90,4 @@ Integrated terminal: You can run command line commands from your editor with Vis
 
 4. Wrapping up
 Congratulations! You’ve successfully set up your text editor and are ready to create websites on your own computer.
-
 Happy coding!
