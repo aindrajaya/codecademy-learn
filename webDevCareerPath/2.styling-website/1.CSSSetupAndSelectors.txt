@@ -124,3 +124,135 @@ For instance, consider the following CSS:
 Both of these CSS rules define what a p element should look like. Since .main p has a class and a p tag as its selector, only the p elements inside the .main element will appear red. This occurs despite there being another more general rule that states p elements should be blue.
 
 IMPORTANT
+There is one thing that is even more specific than IDs: !important. !important can be applied to specific attributes instead of full rules. It will override any stule no matter how specific it is. As a result, it should almost never be used. Once !importatn is used, it is very hard to override. The syntax of !important  in CSS looks like this:
+[p {
+  color: blue !important;
+}
+
+
+.main p {
+  color: red;
+}]
+Since !important is used on the p selector's color attribute, all p elements will appear blue, even though there is more specific .main p selector that sets the color attribute to red. The !important flag is only useful when an element appears the same way 100% of the time. Since it’s almost impossible to guarantee that this will be true throughout a project and over time, it’s best to avoid !important altogether. If you ever see !important used (or are ever tempted to use it yourself) we strongly recommend reorganizing your CSS. Making your CSS more flexible will typically fix the immediate problem and make your code more maintainable in the long run.
+
+MULTIPLE SELECTORS
+In order to make CSS more concies, it's possible to add CSS styles to multiple CSS selectors all at once. This prevents writing repetitive code.. For instance, the following code has repetitive style attributes:
+[h1 {
+  font-family: Georgia;
+}
+
+.menu {
+  font-family: Georgia;
+}]
+Instead of writing font-family: Georgia twice for two selectors, we can separata the selectors by a comma to apply the same styles to both,like this:
+[h1, 
+.menu {
+  font-family: Georgia;
+}]
+By separating the CSS selectors with a comma, both the h1 and the .menu elements will receive the font-family: Georgia styling.
+
+REVIEW CSS SELECTORS
+Throughout this lesson, you learned how to select HTML elements with CSS and apply styles to them. Let's review what you learned:
+--> CSS can change the look of HTML elements. In order to do this, CSS must select HTML elements, then apply styles to them.
+--> CSS can select HTML elements by tags, class, or ID.
+--> Multiple CSS classes can be appliedto one HTML element.
+--> Classses can be reusable, while IDs can only be used once.
+--> IDs are more specific than classes, and classes are more specific than tags. That means IDs will override any styles from a class, and classes will override any styles froma  tag selector.
+--> Multiple selectors can be chained together to select an element. This raises the specificity, but can be necessary.
+--> Nested elements can be selected by separating selectors with a space.
+--> The !important flag will override any style, however it should almost never be used, as is is extremely difficult to override.
+--> Multiple unrelated selectors can receive the same styles by separating the selector names with commas.
+Great work this lesson. With this knowledge, you’ll be able to use CSS to change the look and feel of websites to make them look great.
+
+#QUIZZZ
+1. What is the correct syntax to select an element inside another element?
+ANS: 
+[.main-list li{
+}]
+Correct! Using a space between selectors selects elements of the second selector nested inside the first.
+
+2. The following code attempts to style a paragraph using the <style> tag, but fails to do so. Why?
+[<head>
+  <style>
+    <p style="color:red;">I'm learning to code!</p>
+  </style>
+</head>]
+ANS: The contents of the <style> must be VSS coode, not HTML code. The <p> will no appear at all.
+Both inline styles and <style> can be used together, but <style> should include CSS code, not HTML elements.
+
+3. You wish to link a CSS file called main.css to an HTML file. Which of the following lines of code correctly links the HTML file and the stylesheet?
+ANS: [<link href="main.css" type="text/css" rel="stylesheet" />]
+
+4. What does the <style> HTML tag allow?
+ANS: Writing one or more CSS rules in CSS syntax inside an HTML file
+<style> allows styles to applied inside an HTML file, but so do inline styles.
+Correct! Code inside <style> tags is written in CSS syntax and can include many selectors and rulesets
+
+5. Which of the following statements is correct?
+ANS: IDs are more specific than classes and tags
+Correct! IDs are the most specific, because they should only be used on a single element.
+
+6. What will be the color of the links after applying the CSS below?
+[body {
+ color: green;
+}
+
+.main-content a {
+  color: blue;
+}
+
+a {
+ color: red !important;
+}]
+ANS: red
+Correct! The !important rule will override the other color declarations.
+
+7. Which of the following best describes the concept of CSS selector specificity?
+ANS: Speficity refers to how a browser decides which styles to display when there are multiple styles defined that could apply to the same element.
+It’s good to use descriptive class/ID names, but specificity refers to how the browser chooses how to render overlapping style rules.
+
+8. What is the purpose of the HTML <link> tag when it comes to styling a page?
+ANS: To link a specific stylesheet file to an HTML file so that the styles get applied on the page.
+Correct! <link> is used to connect stylesheets to HTML files.
+
+9. What is the most specific selector in the code below?
+[p {
+  
+}
+
+#side-bar {
+  
+}
+
+.main-content {
+
+}
+
+.main-content p {
+
+}]
+ANS: #side-bar
+ID selectors like #side-bar are more specific than any selector only using element type and/or class selectors.
+
+10. Separating HTML and CSS into their own files helps accomplish which of the following?
+ANS: Separating HTML structure from CSS style makes the code in both languages easier to read and maintain.
+
+11. What is the correct syntax to style multiple unrelated selectors?
+ANS:
+[.nav-menu, p{
+}]
+Correct! Using a comma allows you to apply a style ruleset to multiple selectors.
+
+12. The following HTML code attempts to use inline styling to change the color of the paragraph text, but fails to do so. Why?
+ANS: The color attribute is invalid. It should be changed to style and then set equal to color: red;<p style="color: red;">
+Correct! The style attribute is used to add inline styles to HTML elements.
+
+13. What is the correct syntax to select an element inside another element?
+ANS:
+[.main-list li{
+}]
+Chaining a class selector to an element type selector will select elements of that type that also have the specified class.
+
+14. What is the main difference between inline styles and the <style> tag?
+ANS: Inline styles directly modify individual HTML elements using a style sttribute, whereas the <style> tag allows you to write CSS in a dedicated section of the HTML file.
+=============================
