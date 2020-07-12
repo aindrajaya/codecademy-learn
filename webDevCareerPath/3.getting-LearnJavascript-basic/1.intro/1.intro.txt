@@ -256,14 +256,55 @@ const test1 = 'figuring out quirks';]
 --> Find the data type of a variable’s value using the typeof keyword on a variable.
 --> Use typeof to find the data type of the resulting value when you concatenate variables containing two different data types.
 
+QUIZZZ
+1. What is string interpolation?
+ANS: Using template literals to embed variables into strings
+This is string concatenation. String interpolation when we insert, or interpolate, variables into strings using template literals.
 
+2. What is the outcome of the following code snippet?
+console.log('Hello world');[]
+ANS: Hello world is printed to the console
+Correct! console.log() prints a given string to the console.
 
+3. What will the following code print to the console?
+[let num = 10;
+num *= 3;
+console.log(num); ]
+ANS: 30
+Correct! *= will multiply the num by 3 and then reassign the value of num to that result.
 
+4. What are variables used for in JavaScript?
+ANS: For storing a value's data type
+Yes! Variables hold data.
+ 
+5. Which of the following code snippets would cause an error?
+ANS: 
+[const food = 'chicken';
+food = 'sushi';]
+Nice job! const variables cannot be changed after they’re created.
 
+6. What is string concatenation?
+ANS: When you join strings together
+Correct! String concatenation is the process of joining strings together.
 
+7. Which of the following is an example of a single line comment?
+ANS: //is this comment??
+Correct! // creates a single line comment
 
+8. What is the correct way to declare a new variable that you can change?
+ANS: [let myName = 'Sloan';]
+Right on! let is used to declare variables that can be changed.
 
+9. What is the correct way to call a string’s built-in method?
+ANS: [ 'codecademy'.toUpperCase(); ]
+The toUpperCase method is built into strings, so it is called appending it to a string with the dot operator.
 
+10. What is the correct way to call the random method on the Math global object?
+ANS: [ Math.random() ]
+Nice work! This is the correct syntax.
 
-#2. Variables
-#3. Versions
+11. What is the outcome of this statement?
+[ console.log('hi!'.length); ]
+ANS: 3 is printed to the console
+Nice work! .length will access the length property of hi! which is 3 characters long.
+
