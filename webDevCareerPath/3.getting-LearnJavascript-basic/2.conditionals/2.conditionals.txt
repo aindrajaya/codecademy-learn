@@ -1,0 +1,34 @@
+2. CONDITIONAL STATMENT
+WHAT ARE CONDITIONAL STATEMENTS?
+In life, we make decisions based on circumstances. Think of an everyday decision as mundane as failing asleep- if we are tired, we go to bed, otherwise, we wake up and start our day. These if-else decisions can be modeled in code by creating conditional statements. A conditional statement checks a specifc conditions(s) and performs a task absed on the conditions(s). In this lesson, we will explore how programs make decisions by evaluating conditions and introduce logic into our code!
+We'll covering the following concepts:
+- if, else if, and else statements
+- comparison operators
+- logical operators
+- truthy vs falsy values
+- ternary operators
+- switch statement
+So if you’re ready to learn these concepts go to the next lesson— else, read over the concepts, observe the diagram, and prepare yourself for this lesson!
+
+IF STATEMENT
+We often perform a task based on a condition. For example, if the weather is nice today, then we will go outside. If the alarm clock rings, then we’ll shut it off. If we’re tired, then we’ll go to sleep. In programming, we can also perform a task based on a condition using an if statement:
+[if (true) {
+  console.log('This message will print!'); 
+}
+// Prints: This message will print!]
+Notice in the example above, we have an if statement. The if statement is composed of:
+--> The if keyword followed by a set of parentheses () which is followed by a code block, or block statement, indicated by a set if curly braces {}.
+--> Inside the parentheses (), a condition is provided that evaluates to true or false.
+--> If the condition evaluates to true, the code inside the curly braces {} runs, or executes
+--> If the condition evaluates to false, the block won't execute.
+Let’s make an if statement.
+
+IF...ELSE STATEMENTS
+In the previous exercies, we used an if statement that checked a condition to decide wheter or not to run a block of code. In many cases, we'll have code we want to runt if our condition evaluates to false. If we wanted to add some default behavior to the if statement, we can add else statement to run a block of code when the condition evaluates to false. Take a look at the inclusion of an else statement:
+[if(false){
+  console.log('The code in this block will not run');
+}else{
+  console.log('But the code in this block will!');
+}
+// Prints: But the code in this block will!]
+An else statement must be paired with an if statement, and together they are referred to as an if...else statement.
