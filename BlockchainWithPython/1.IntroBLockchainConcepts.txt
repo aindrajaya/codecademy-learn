@@ -1,0 +1,92 @@
+WHY BLOCKCHAIN?
+In 2010, a programmer paid 10000 bitcoins for 2 pizzas, roughluy worth $20. In 2018, that same number bicoinst is estimated at $83 million value!. The exchange of Bitcoin is possible due to an underlying technology that secures and simplifies transactions removing the need for a bank or central authority. Anyone with an internet connection has the freedom to own and exchange this digital currency. The powerful architecture that drove this revolution was blockchain. Businesses started to realize the potential of blockchain and are reapidly mobilizing to understand and implement it. But, what exactly is blockchain and what makes it so transformative?
+After you complete this course, you will have a basic foundation of blockchain principles. You will also have the opportunity to create your own mini blockchain where you will transform these concepts into code.
+
+WHAT IS BLOCKCHAIN?
+The blockchain is similar to a permanant book of records that keeps a log of all transactions that have taken place in chronological order. Let's envision a bank transaction in which tere are three parties: the sender, the bank ,and the recipien. In order to ensure that there are no fraudulent transactions, the bank acts as the central authority between the parties. The blockchain also logs transactions between senders and receivers, excepts there is no bank or central authority. Instead, the blockchain relies on a public network of computers to verify the transaction. The blockchain is just an accurate, and permanent record of all the transactions that have happened amongst the members in that blockchain's network. In this analogy, each block in the blockchain represents an transactions, and reach transaction is connected to the prior transaction to form the entire connected blockchain. 
+Key terms:
+--> Block: A block is an individual transaction or piece of data is being stored wihtin the blockchain
+--> Blockchain: A blockchain is a continously growing list ("chain") of records ("block"), called blocks, which are linked chronologically and secured using cyrptography.
+[IMAGE: https://s3.amazonaws.com/codecademy-content/courses/blockchain/Lesson+1/Exercise-2.svg]
+The image shows how bank transactions can be easily represented in the blockchain. The sender and recipient, as well as the transactions, is stored inside the block and is chained together with other transactions that occured before and after it.
+
+THE BLOCKCHAIN NETWORK
+So how do Blockchian-ased applicationslike Bitcoin and Ethereum validate transactions without a central authority?
+In the blockchain, there are many participants in the network that are constatntly checking ot ensure that each transaction is valied. Each participants is a computer that owns a copy of the blockchain. These participants cross-reference their copy of the blockchain each time a new block is being intorduced. Because this validation depends on mulitple participants, the digital records in "decentralized". In order for a new block to be added, 51% of all of the participants in the blockchain network must verify that the new block is no fraudulent. Once a block has been verified as a valid transaction, it is added to each participant's copy of the blockchain. By having the majority of participants validate a new transactions, the blockchain removes the need for a central authority and automates the completion of transactions, reducing transactions fees while ensuring a high level of security.
+Key Terms:
+--> Blockchain Network: The blockchain network and blockchain are terms used interchangeably. They represent the entire blockchain from the structure itself to the network that it is a part of.
+--> Decentralization: The concept in whih participants work together to validate transactions without relying on a central authority.
+--> Participant: A client that owns a copy of the blockchain and verifies transactions across the network.
+
+WHAT ARE BLOCKS IN THE BLOCKCHAIN?
+Just like bricks are the buildign blocks of a house, blocks themselves are the building blocks of a blockchain. A block contains transaction data and other importatn details related to the creation of that block, such as the time when it was created and other unique information. In order to cratea a block, we must have a record that we wish to store. In this lesson, we will be discussin transactions data. This just one example, but blocks can hold different types of data depending on what the blockchain is used for. However, at ist heart, a block will always contain a timestamp or the data regarding the time when the block was created. A block will also always contain a unique hash of a unique code produced all the contentes within the block itself- also known as a digital fingerprint. Lastly, a block will also always contain a previous hash or  a reference to the prior block's hash. This reference to thte prior block is how blocks chain to one another. We ill dive into more details about the hash later. These attributes about a lbock are what make it part of a blockchain structure. 
+Properties in a BLock:
+--> Timestamp: The time the block is created determines the location of it on the blockchain
+--> Transaction Data: The information to be securely stored in the block.
+--> Hash: a unique code produced by combining all the contents within the block itself- also known as a digital fingerprint.
+--> Previous Hash: Each block has a reference to the block prior its hash. This is what makes the blockchain unique because this link will be broken if a block is tampered with.
+[GAMBAR: https://s3.amazonaws.com/codecademy-content/courses/blockchain/Lesson+1/Exercise-4.svg]
+
+HASHING
+Hashing is an application of cryptography that is fundamental to the design of the blockchain. It is a way to generate a seemingly random, but calculated string of letters and numbers from any input. This is accomplished by the use of a hash funtion. Think of a hash function as a machine that takes an object, such as an apple, and turns it into a varying combination of letters and numbers, such as "1a432bf". The output ("1a432bf") is known as the hash of the input, the apple. If you give the machine two apples intead of one, it will return a different hash (such as "26f5ce1"). There are manyh types of machines out there, so the resulting hash varies form machine to machine. Similarly, there are manyh types of hash functions available. Blockchain uses a cryptographic hash function, meaning that the output is random but deterministing. This means the same input will always produce the same hash. That process in one-way, so the output (hash) cannot be used to produce the original input.
+Key Terms:
+--> Deterministic: The same input will always produce the same output, but that output cannot produce the original input.
+--> Hash: A calculated string of letters and numbers produced from a specific input.
+--> Hash Function: A function that takes in an input of a random size, performs hashing on the input, and generates a seemingly random output of a fixed size, also known as the hash.
+
+THE GENESIS BLOCK
+To recap, a blockchain is similarly to a permanent book of records- it keeps an accurate unchanging record of all data, or transactions, stored in chronological order. Each block has a reference to the block's previous hash. This is how blocks are "chained" together. If a block's contents are tampered with, the block's hash changes and the chains breaks, making it difficult to successfully tamper with any one piece of the chain. Since all blocks in the blockchain have a referecen to the previous block, the first block is a little different thatn the rest. It is known as the Genesis Block. The problem, however, is that the Genesis Block does not have  ablock before it. So it wouldn't make sense to have a previous hash stored inside it. To resolve this minor issue, the value of the previous hash is typically hard-coded into the Genesis Block with the default value of zero.
+Key Terms:
+--> Genesis Block: The genesis block is the first block on the blockchain and it is typically hard-coded into the blockchain structure. Being the first block on the blockchian, it does not have a link to a previous hash.
+
+VISUALIZING BLOCKCHAIN
+Congratulations! You just learned the basics of blockchain technology. Below is a review of important terms that you may want to study to further solidify your knowledge on the blockchain.
+Let's remember the vocabulary we learned
+--> Blockchain: A blockchain is an accurate and permanent record of transactions that have been verified and stored in a chronological sequence.
+--> Blocks: A block is an individual transaction or piece of data that is being stored within the blockchain.
+--> Blockchain Network: The blockchain network and blockchain are terms used interchangeably. They represent the entire blockchain from the structure itself to the network that it is a part of.
+--> Decentralization: The concept in which users work together to validate transactions withou reluing on a central authority.
+--> Participant: A client that owns a copy of the blockchain and verifies transactions across the network.
+--> Deterministic: The same input will always produce the same output, but that output will never produce the original input.
+--> Hash: A fixed-length string of varying combination of letters and numbers produced form a specific input of arbitrary size.
+--> Hash function:  A function that takes in an input of a random size, performs hashing on this input, and generates a random output of a fized size, also known as the hash.
+--> Genesis Block: The genesis block is the first block on the blockchain and it is typically hard-coded into the blockchain structure. Being the first block on the blockchain, it does not have the link to a previous hash.
+BLock Property:
+--> Timestamp: The time the block is created determines the location of it on the blockchain.
+--> Data: The information to be securely stored in the block.
+--> Hash: A unique code produced byh combining all the contents within the block itself- also known as a digital fingerprint.
+--> Previous Hash: Each block has a reference to the block prior to its hash. This is what makes the blockchain unique because this link will be broken if a block is tampered with.
+The visualization represents the basic properties and structure of a blockchain. Go ahead and hit Submit Data for each of the blocks.
+After that, try and tamper with the block in the middle. What happens when the block is updated?
+
+QUIZZZ
+1. Which of the following actions does NOT change the current block’s hash?
+ANS: Modifying the previous hash component of the following block
+RSN: Correct! Changing the previous hash component of the following block changes the hash of the following block, not the hash of the current block.
+
+2. Which of the following does NOT correctly describe the blockchain?
+ANS: A centralized ledger that safety records transactions in a chronological order.
+RSN: Awesome! This is not true! The blockchain is a decentralized ledger, which allows it to add blocks securely.
+
+3. Which of the following is NOT True about the blockchain?
+ANS: Blockchain is an implementation of Bitcoin
+RSN: Well done! This isn’t true, because Bitcoin is an implementation of the blockchain technology!
+
+4. Based on what you’ve learned so far, which of the following components can you find in a block?
+ANS: Transactions Data, Timestamp, Hash, Previous Hash
+
+5. The output of a good cryptographic hash function, such as the SHA-256, is:
+ANS: Random but deterministic
+RSN: Well done! The output of the SHA-256 function may be random, but the same input always produces the same output.
+
+6. What makes a Genesis Block unique?
+ANS: The Genesis Block is the first block, so the block itself and the "previous block's" hash is hard-coded.
+RSN: Correct! The previous block’s hash must be hard-coded because there is no block the Genesis Block can reference
+
+7. An input in the form of a string called “Blockchain” is passed into a hash function to produce another string called “BC5F9D3A” as the hash. Which is of the following is TRUE?
+ANS: There is another input that can also produce “BC5F9D3A” 
+RSN: 
+
+8. Which of the following is TRUE about the blockchain?
+ANS: Blockchain can be sued to design a decentralized online voting system
+RSN: Correct! This is one of the many potential applications for the blockchain!
