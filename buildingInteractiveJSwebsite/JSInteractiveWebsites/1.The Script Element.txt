@@ -1,0 +1,9 @@
+#JAVASCRIPT AND HTML
+HTML defines the structure of a web page by using page elements as the building blocks. However, HTML by itself can not product web page interactivity, that's where JavaScript comes in. Below, we see a post-it with a typical stick figure on it. We can think of this as the HTML, with the head, body, and limbs as the elements on the page:
+[GAMBAR: https://s3.amazonaws.com/codecademy-content/courses/script/Javascript_stick_figure.png]
+In web development, CSS provides the style to our HTML structure. Below, the stick figure is no dressed in a nice tuxedo.
+[GAMBAR: https://s3.amazonaws.com/codecademy-content/courses/script/Javascript_stick_figure_2.png]
+If HTML and CSS provide structure and syle in this analogy, JavaScript provides interactivity, allowing our stick figure to move. Below, the stick figure moves, swaying up and down.thanks to JavaScript:
+[GAMBAR: https://s3.amazonaws.com/codecademy-content/courses/script/stick_figure_v2.gif]
+Web programmers use JavaScript to make web pages dynamic and interactive. This powerful scripting language is encapsulated in its own HTML element: the <script> element. You can think of this <script> element as the door to JavaScript for HTML. This lesson will dig deeper into what the <script> element can do for your websites and best practices on how and where to insert JavaScript in your HTML files.
+In the diagram to the right, we display HTML as the architecture of a web page, or the house structure. The script tag serves as the door opener connecting JavaScript to the HTML file.
