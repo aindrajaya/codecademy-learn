@@ -1,0 +1,76 @@
+2. Why Data Structures?
+Learn what data structures are, why they are useful, and howyou can use them effectiely. 
+#What even are data structures?
+At the backbone of every program or piece of software are two entities: data and algorithms. Algorithms transform data into something a program can effectively use. Therefore, it is important to understand how to structure data so algorithms can maintain, utilize, and iterate through data quickly. Data structures are the wayh we are able to store and retrieve data. You mayh already be familiar with Python lists and dictionaries or JavaScript arrays and objects. If so, you know that lists and arrays are sequential with data accessed by index while dictionaries and objects use a named key to store and retrieve information. The data structures that exist in programming language are pretty similar to real-world systems that we use outside of the digital sphere. Imagine that you go to the grocery store. At this particular grocery store, the frozen pizza is stored does not have signs that indicate where different items are located. In this disorganized grocery sore, you would have a pretty difficult time tryhing to find what you were looking for!. Fortunately, most grocery stores have a clear order to the wayh the store is stocked and laid out. Similarly, data structures provide us with a way to organize information (including other data stuctures) in a digital space.
+
+#How are data Structures used?
+Data structures handle four main functions for us:
+--> Inputting information
+--> Processing information
+--> Maintaining information
+--> Retrieving information
+Inputting is largerly concened with how the data is received. What kind of information can be included? Will the new data be added to the beginning, end, or somewhere in the middle of the existing data? Does an existing point of data need to be updated or destroyed? 
+Processing gets at the way that data is manipulated in the structure. This can occur concurrentlly or as a result of other processes that data structures handle. How does existing data that has been stored need to change to accomodate new, updaetd, or removed data?
+Maintaining is focused on how the data is organized withing the structure. Which relationships need to be maintained between pices of data? How much memory must the system reserve (allocate) to accomodate the data? 
+Retrieving is devoted to finding and returning the data that is stored in the structure. How can we access that information again? What steps does the data structure need to take to get the information back to us? Different types and use cases for data will better suited to different manners of inputting, processing, storing, and retrieving. This is why we have several data structures to choose form... and the abilityh to create our own. 
+
+#Choosing the best data structure
+Your plumber probably would not be the best professional to diagnose and illness and your doctor probably wouldn't be the best person to do your taxes- they are each better suited for other tasks! Similarly, different data structures are better suited for different tasks. CHoosing the wrong data structure can result in slow or unresponsive code (and mess up your program!), so it's important to consider a few factors as you make your decision:
+1. What is the intended purpose for the data? Do any data structures have built-in functionality that is ideally suited for this purpopse? Do you want to search, sort, iterate data in a way in which certain data structures would be better suited than others?
+2. Do you want or need control over how memory is set asied to store your data? Data structures that use static memory allocation (e.g., stacks or arrays) will manage memory for you and assume fixed amount of memory upon installation with a cap on how much data may be added. Data structures that utilize dynamix memory allocation (e.g., heaps or linked lists) allow you to allocate and reallocate memory within the life of the program. While memory allocation is not something that you'll need to consider in languages lik Python or JavaScript (these languages will manage memory for you,regardless of which data strucutre you use), it is something to bear in mind when working in other languages like C.
+3. How long will it take different data structures to accomplish various tasks relative to toher data structures? Technically, two data structures mayh both be able to accomplish the same task for you, but one may be quire a bit faseter. This consideration, known as runtime will be covered further in depth when you explore all the nifty tricks of asymptotic notation.
+
+As you've seen, data structures are the essential building blocks that we use to organize all of our digital informatio. Choosing the right data structure allows us to use the algorithms we want and keeps our code running smoothly. Understanding data structures and how to use them well can play a vital roel in many situation including:
+--> technical interview in which you may be asked to evaluate and determine runtime for data structures given specific algorithms
+--> day-to-day work for many software engineers who manipulate data stored in structures
+--> Data science work where data is tored and accessed through data structures.
+--> A whole lot more!
+
+#Data Strcuture APIs
+A brief onverview of APIs as they relate to JavaScript data strucutures. Data structures are all about choosing the right tool for the job. Do you need to store data in an ordered way, or do you just need to be able to store it and retrieve it quickly? What's more important to your use case: how fast the data structure performs, or how much memory it takes up? Different data structures all have advantages, disadvantages, and use cases, and that's the whole reason that there are different data structures! Consider the Array in JavaScript. It's really great data structure for storing ordered data because you can retrieve elements by index number. If you want the first element of an array, all you need to do is fetch it with index 0: arrayName[0]. It also provides all sorts of helpful methods for manipulating elements, such as .push(), .opo(), .sort(), and more. However, if you want to find out if a particular element exits in an array, you may need to iterate through the entire array. What if I asked you to keep track of a series of numbers as I gave them to you, and then asked at the end whether I'd given you a particular number, you could probably do that in your memory. But if I asked you to do that in a computer program, you'd have to make choices about how to store the data. Let's look at two possibilities of how we'd build storeNumber() and doYouHaveThisNumber() funcitons. Given the following list of numbers:
+[ 1, 250, -42, 0.4, 17 ]
+How might you store these numbers if I gave you each at a time? You might use an array:
+[ 
+const listOfNumbers = [];
+const storeNumber = num => listOfNUmbers.push(num);
+const doYouHaveThisNumber = num => listOfNumbers.includes(num);
+]
+In this program, storeNumber() adds a number to the array, and doYouHaveThisNumber() returns true if that number exists in the array, and false otherwise. Looks pretty good, but what if you had 10000000 numbers? doYouHaveThisNumber() might start getting slow, since Array.prototype.includes(). Iterates through the entire array until it finds the input value. Let's try using another built-in data type in JavaScript, the Object. Since all we want to keep track of is whether we received a particular number, we can just store those numbers in an object, and set their values to true if we received them:
+[
+const receivedNumbers = {};
+const storeNumber = num => receivedNumbers[num] = true;
+const doYouHaveThisNumber = num => receivedNumbers[num] === true;
+]
+In this case, we'll have the same result on the outside, but because retrieving a value from an object is much faster than iterating through an array, the overall result will be faster. In both cases, the public API of the code, meaning the parts of the code that we want the end-user to interact with, remained the same: we had two functions, storeNUmber() and doYouHaveThisNumber(). The underlying implementation, or the way the functionality was actually achieved, is what altered.
+
+#What is an API
+API is an acronym for application programming inteface. An API allows end-users to access properties and methods of data structures easily and without needing to do the "behind the scenes" work. For example, if you want to add a new element to the end of an array, you don't need to loop through the entire array, counting how many elements there are, and then setting myArray[currentCount + 1] equal to the new value. Instead, you can just call .push() with the value you want to add. As a JavaScript programmer, you don't actually need to know the actual strategy, or the underlying implementation, of how .push() added an element to the end of the arrayh in order to use it.
+The API of arrays provides lots of useful functionality, form adding and removing elmeents to the start and end of the array, to iterator methods that call a function on each element. If you wanted to find the smallest number in an array of numbers, however, you'd have to implement that functionality yourself.
+
+#Creating Your Own APIs
+As you build your own data structures, you will implement the functionality to create public APIs. As in the example of storeNumber() and doYouHaveThisNumber(), the same public API can be implemented in different ways, so it's important ot think about the advantages and disadvantages of different implementations.
+An API is like a message to end-users. Some languages have classes that can have methods or fields that are either public (can be called from anywhere) or private(can only be called from within the class). Public methods are the ones that end-users of that class can call, and private methods are onlyused byh the class itself. JavaScript doesn't really support this concept, so properties that aren't meant to be public are often preceded by an underscore _. Let's look at an example where we want to build a data structure with a restricted API
+A stack is a data structure that only allows data to be added (pushed) or removed (popped) from the "top" of the stack. It just so happens that we could use an array as a stack, since it already has a .push() and .pop() method! However, arrays also allow you to add elements to the beginnig or randomly access elements by index. We're not going to cover all the ins and outs of the stack data structure right now, bujt to demonstrate public API vs Implementation, let's build a quick custom Stack class:
+[class Stack{
+  constructor(){
+    this._array = [];
+  }
+}]
+In Stack, the array itself is stored as _array, so it's a digital to toher developers that to use the Stack as intended, they shouldn't need to access it directly. From there, we can implement the .push() and .pop() methods:
+[classStack{
+  constructor(){
+    this._array = [];
+  }
+
+  push(newValue){
+    this._array.push(newValue);
+  }
+
+  pop(){
+    return this._array.pop();
+  }
+}]
+Now we've created a Stack data structure that limits direct interaction with the underlying data to .push() and .pop(). A developer could still access our underlying array to do other manipulation:
+[ const stack = new Stack();
+stack._array.unshift('value'); ]
+but they would then be breaking the intended behavior of the Stack class. The whole point of a public API is that we offer functionality to toher end-users. If somebody were using ourj Stack class in a program, we could totallyh change the underlying implementation, and as long as the end-user API remained the same, their program should continue to function. As you build your own classes and data structures, it's important to kepp in mind this distinction between implementation (what does this need internally to do its job) and the outside API (how should users of this actually interact with it)
